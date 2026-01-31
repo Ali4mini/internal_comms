@@ -1,0 +1,23 @@
+# Filename: livekit.yaml
+port: 7880
+rtc:
+    udp_port: 7882
+    tcp_port: 7881
+    port_range_start: 50000
+    port_range_end: 50200 # Small range for local dev speed
+    use_external_ip: true 
+
+# Keys for generating tokens (API Key: Secret)
+keys:
+    devkey: secret
+
+logging:
+    json: false
+    level: info
+
+# Connect to the Redis service in Docker Compose
+redis:
+    address: redis:6379
+    username: ""
+    password: ""
+    db: 0
